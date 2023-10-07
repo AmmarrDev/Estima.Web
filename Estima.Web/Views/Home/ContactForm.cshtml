@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "ContactForm";
+}
+
+<div>
+    <h1 class="display-4 text-center">Contact Us</h1>
+    <form asp-controller="YourControllerName" asp-action="YourActionName" method="post">
+        <div class="form-group">
+            <label class="form-label mt-4">Email address</label>
+            <input type="email" name="Email" class="form-control" placeholder="Enter email">
+            <span class="text-danger">@ViewData["EmailError"]</span>
+            <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label mt-4">Password</label>
+            <input type="password" name="Password" class="form-control" placeholder="Password">
+            <span class="text-danger">@ViewData["PasswordError"]</span>
+        </div>
+
+        <!-- The rest of your form elements without asp-for -->
+        
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
